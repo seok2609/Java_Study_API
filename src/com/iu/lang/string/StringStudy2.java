@@ -21,11 +21,19 @@ public class StringStudy2 {
 		String result = "이미지 파일이 아닙니다.";
 		fileName = fileName.substring(index);                      //.txt
 		for(int i=0;i<files.length;i++) {
-			if(fileName.equals(files[i]));
-			result ="이미지 파일입니다";
+			if(fileName.equals(files[i])) {
+				result ="이미지 파일입니다";
+//				System.out.println("이 파일은 이미지 파일입니다");
+					break;
+				} else {
+				System.out.println(result);
+//					System.out.println("이 파일은 이미지 파일이 아닙니다");
+				}
 			break;
 		}
-		System.out.println(result);
+			
+					
+		
 
 //		System.out.println(hwak[0]);
 //		
