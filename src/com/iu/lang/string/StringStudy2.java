@@ -25,12 +25,13 @@ public class StringStudy2 {
 				result ="이미지 파일입니다";
 //				System.out.println("이 파일은 이미지 파일입니다");
 					break;
-				} else {
-				System.out.println(result);
-//					System.out.println("이 파일은 이미지 파일이 아닙니다");
 				}
-			break;
+			System.out.println(result);
+//					System.out.println("이 파일은 이미지 파일이 아닙니다");
+				
+			
 		}
+		
 			
 					
 		

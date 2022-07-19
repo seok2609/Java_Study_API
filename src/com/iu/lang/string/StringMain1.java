@@ -33,7 +33,12 @@ public class StringMain1 {
 		
 //		ss2.studySubString();
 		
-		ss2.ex2();
+//		ss2.ex2();
+		
+		StringStudy3 s3 = new StringStudy3();
+		
+//		s3.studySplit();
+		s3.studySplit3();
 		
 		
 		
