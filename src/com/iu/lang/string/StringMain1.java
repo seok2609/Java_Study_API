@@ -38,7 +38,7 @@ public class StringMain1 {
 		StringStudy3 s3 = new StringStudy3();
 		
 //		s3.studySplit();
-		s3.studySplit3();
+		s3.studySplit();
 		
 		
 		
