@@ -25,24 +25,59 @@ public class WrapperEx2 {
 		Scanner sc = new Scanner(System.in);
 		
 		
-//		String jumin = sc.next();
-		String jumin = "991209-1234567";
+		String jumin = sc.next();
+//		String jumin = "991209-1234567";
+		int count =2;
+		int sum = 0;
+		for(int i=0;i<jumin.length()-1;i++) {
 		
-		String jumins = jumin.replaceAll("-","");
-//		System.out.println(jumins);
-		
-		int num = Integer.parseInt(jumins);
-		for(int a=0;a<jumins.length();a++) {
-			for(int i=2;i<10;i++) {
-				num = jumins.charAt(a)*(i);
+	//		String jumins = jumin.replaceAll("-","");
+	////		System.out.println(jumins);
+	//		
+	//		int num = Integer.parseInt(jumins);
+	//		for(int a=0;a<jumins.length();a++) {
+	//			for(int i=2;i<10;i++) {
+	//				num = jumins.charAt(a)*(i);
+	//			}
+	//			System.out.println(num);
+	//		}
+			
+			//1. substring()   : String
+	//		String num = jumin.substring(0, 1);
+	//		int n = Integer.parseInt(num);
+			
+			//2. charAt()      : char
+	//		char ch = jumin.charAt(0);  
+	//		int n = Integer.parseInt(ch+""); // char타입을 int타입으로 변환하는 방법
+			
+	//		String num = String.valueOf(ch); //                 "
+	//		int n = Integer.parseInt(num);
+			if (i==6) {
+				continue;
 			}
-			System.out.println(num);
+			
+			int n = Integer.parseInt(String.valueOf(jumin.charAt(i)));
+			
+			sum = sum + n*count;
+			count++;
+		}	
+		
+		int check = sum%11;
+		
+		check = 11 - check;
+		
+		if(check>9) {
+			check = check%10;
+			
 		}
+		//check용 번호
+		int checknum = Integer.parseInt(String.valueOf(jumin.charAt(jumin.length()-1)));
 		
-		
-	
-		
-		
+		if(check == checknum) {
+			System.out.println("정상 주민번호");
+		}else {
+			System.out.println("비정상 주민번호");
+		}
 		
 	}
 

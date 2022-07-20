@@ -34,8 +34,6 @@ public class WrapperEx1 {
 
 		//2. 현재 나이 출력
 		int age = Integer.parseInt(nums.substring(0, 2));
-//		String year = nums.substring(0, 2);
-//		System.out.println(year);
 
 		if(ch=='1' || ch=='2') {
 			age=2022-(1900+age)+1;
@@ -44,8 +42,16 @@ public class WrapperEx1 {
 			age=2022-(2000+age)+1;
 			System.out.println(age);
 		}
-		
-		
+//		String year = nums.substring(0, 2);
+//		System.out.println(year);
+//		
+//		String cen = "20";
+//		if(ch=='1' || ch=='2') {
+//			cen="19";
+//			
+//		}
+//		year = cen+year;
+//		int y = Integer.parseInt(year);
 		
 		//3. 계절 출력
 		
@@ -54,7 +60,7 @@ public class WrapperEx1 {
 			System.out.println("봄");
 		}else if(month>5 && month<9){
 			System.out.println("여름");
-		}else if(month>8 && month <12) {
+		}else if(month>8 && month<12) {
 			System.out.println("가을");
 		}else {
 			System.out.println("겨울");

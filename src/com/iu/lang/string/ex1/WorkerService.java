@@ -1,5 +1,7 @@
 package com.iu.lang.string.ex1;
 
+import java.util.StringTokenizer;
+
 public class WorkerService {
 	
 //	private String info;
@@ -22,24 +24,40 @@ public class WorkerService {
 		String info = sb.toString();
 		
 		String newInfo = info.replace(",", "-");
+		StringTokenizer st = new StringTokenizer(newInfo, "-");
+		int index = 0;
 		
+		WorkerDTO [] workerDTOs = new WorkerDTO[st.countTokens()/4];
 		
-		String [] infos = newInfo.split("-");
-		
-		WorkerDTO [] workersDTOs = new WorkerDTO[infos.length/4];
-		
-		System.out.println(infos.length);
-		
-		for(int i=0;i<infos.length;i++) {
-			
+		while(st.hasMoreTokens()) {
 			WorkerDTO workerDTO = new WorkerDTO();
-			workersDTOs[i/4]=workerDTO;
-			workerDTO.setName(infos[i].trim());          //4, 8
-			workerDTO.setDepartment(infos[++i].trim());    //5, 9
-			workerDTO.setJob(infos[++i].trim());			  //6, 10
-			workerDTO.setPhone(infos[++i].trim());         //7, 11
-				
+			workerDTO.setName(st.nextToken());
+			workerDTO.setDepartment(st.nextToken());
+			workerDTO.setJob(st.nextToken());
+			workerDTO.setPhone(st.nextToken());
+			workerDTOs[index]=workerDTO;
+			index++;
 		}
+		
+		
+		
+		
+//		String [] infos = newInfo.split("-");
+//		
+//		WorkerDTO [] workersDTOs = new WorkerDTO[infos.length/4];
+//		
+//		System.out.println(infos.length);
+//		
+//		for(int i=0;i<infos.length;i++) {
+//			
+//			WorkerDTO workerDTO = new WorkerDTO();
+//			workersDTOs[i/4]=workerDTO;
+//			workerDTO.setName(infos[i].trim());          //4, 8
+//			workerDTO.setDepartment(infos[++i].trim());    //5, 9
+//			workerDTO.setJob(infos[++i].trim());			  //6, 10
+//			workerDTO.setPhone(infos[++i].trim());         //7, 11
+//				
+//		}
 		
 //		info = info.replace(",", "-");
 //		
@@ -50,7 +68,7 @@ public class WorkerService {
 //		}
 //		return null;
 		
-		return workersDTOs;
+		return workerDTOs;
 	}
 
 }
