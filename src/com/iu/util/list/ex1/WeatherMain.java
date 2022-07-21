@@ -33,12 +33,14 @@ public class WeatherMain {
 //		ar.add(cityDTO2);
 		
 		ArrayList<CityDTO> ar = new ArrayList<>();
-		ws.init(ar);
-		
-
-		ws.add(ar);
-		wv.view(ar);
+//		ws.init(ar);
+//		
+//
+//		ws.add(ar);
+//		wv.view(ar);
 //		wc.start();
+		
+		wc.start();
 
 		
 		
