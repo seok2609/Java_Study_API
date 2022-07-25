@@ -13,7 +13,7 @@ public interface Service {
 	//StudentDAO의 setList를 호출하고 
 	//그 결과를 리턴
 	
-	public StudentDTO getSTudent(ArrayList<StudentDTO> ar) throws Exception;
+	public StudentDTO getStudent(ArrayList<StudentDTO> ar) throws Exception;
 	//찾을려고 하는 학생의 번호를 입력 받아서
 	//찾은 학생을 리턴
 	
